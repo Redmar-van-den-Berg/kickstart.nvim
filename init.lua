@@ -171,6 +171,10 @@ require('lazy').setup({
     },
     build = ":TSUpdate",
   },
+  -- Snakemake highlighting
+  {
+    dir = '~/devel/snakemake/misc/vim',
+  },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
@@ -407,7 +411,6 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-  snakefmt = {},
   pylsp = {},
   -- clangd = {},
   -- gopls = {},
