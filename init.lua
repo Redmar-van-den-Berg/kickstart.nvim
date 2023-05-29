@@ -171,6 +171,11 @@ require('lazy').setup({
     },
     build = ":TSUpdate",
   },
+
+  { -- Null-ls for mypy, we configure it later
+    'jose-elias-alvarez/null-ls.nvim',
+  },
+
   -- Snakemake highlighting
   {
     dir = '~/devel/snakemake/misc/vim',
@@ -497,9 +502,17 @@ cmp.setup {
   },
 }
 
+-- Configure mypy with null-ls
+local null_ls = require('null-ls')
+
+local sources = {
+  null_ls.builtins.diagnostics.mypy
+}
+null_ls.setup({ sources = sources })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 --
 -- Folding settings
 vim.opt.foldlevel = 10
--- vim.opt.foldmethod = "indent"
+vim.opt.foldmethod = "indent"
