@@ -506,9 +506,11 @@ cmp.setup {
 local null_ls = require('null-ls')
 
 local sources = {
-  null_ls.builtins.diagnostics.mypy
+  null_ls.builtins.diagnostics.mypy.with({
+    extra_args = {"--strict"}
+  })
 }
-null_ls.setup({ sources = sources })
+null_ls.setup({ sources = sources})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
