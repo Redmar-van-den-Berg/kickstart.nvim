@@ -75,6 +75,9 @@ require('lazy').setup({
 
   -- Rainbow CSV
   'mechatroner/rainbow_csv',
+
+  -- Practive vim movements
+  'ThePrimeagen/vim-be-good',
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   { -- LSP Configuration & Plugins
@@ -205,7 +208,7 @@ require('lazy').setup({
 vim.o.hlsearch = false
 
 -- Make line numbers default
-vim.wo.number = true
+vim.wo.relativenumber = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
