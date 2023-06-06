@@ -209,6 +209,7 @@ vim.o.hlsearch = false
 
 -- Make line numbers default
 vim.wo.relativenumber = true
+vim.wo.number = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
@@ -521,3 +522,7 @@ null_ls.setup({ sources = sources})
 -- Folding settings
 vim.opt.foldlevel = 10
 vim.opt.foldmethod = "indent"
+
+-- Enable highlight search, and dont wrap lines by default
+vim.opt.hlsearch = true
+vim.opt.wrap = false
